@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--settings:控制mybatis全局行为-->
+    <!--<settings>
+        &lt;!&ndash;设置mybatis输出日志&ndash;&gt;
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>-->
+    <!--设置别名-->
+    <typeAliases>
+        <!--name:实体类所在的包名(不是实体类的包名也可以)-->
+        <package name="com.bjpowernode.domain"/>
+    </typeAliases>
+
+
+    <!--sql mapper(sql映射文件)的位置-->
+    <mappers>
+        <!--一个mapper标签指定一个文件的位置
+            从类路径开始的路径信息，代码编译之后会有target/calsses
+        -->
+        <!--<mapper resource="com/bjpowernode/dao/StudentDao.xml"/>-->
+        <!--name是包名，这个包中的文件都能一次被映射
+        mapper文件名称必须和dao接口名完全一样
+        必须在同一个目录
+        -->
+        <package name="com.bjpowernode.dao"/>
+    </mappers>
+</configuration>
